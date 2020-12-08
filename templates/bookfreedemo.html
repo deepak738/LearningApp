@@ -1,0 +1,42 @@
+{% extends 'base.html' %} 
+
+{% block title %} bookfreedemo
+{% endblock title %}
+{% block body %}
+<div class = "container-fluid px-0 mb-3">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="/static/contact.jfif" class="d-block w-100" alt="...">
+    </div>
+    </div>
+   
+   <div class = "container ">
+    <h1 class ="text-center">BookDemo</h1>
+<form method="post" action="/bookfreedemo">
+{% csrf_token %}
+    
+  <div class="form-group">
+    <label for="desc">Enter your ClassGrade and Subjects for Demo</label>
+    <textarea  class="form-control" id="desc" rows="1" name ="desc"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder = "Enter your name">
+  </div>
+   <div class="form-group">
+    <label for="name">Email/ParentEmail</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder = "Enter your Email">
+  </div>
+  <div class="form-group">
+    <label for="phone">PhoneNumber</label>
+    <input type="phone" class="form-control" id="phone" name="phone" placeholder = "Enter your PhoneNumber">
+  </div>
+  
+  <button type="submit" class="btn btn-primary ">BookDemo</button>
+</form>
+  </div>
+</div>
+</div>
+
+{% endblock body %}
